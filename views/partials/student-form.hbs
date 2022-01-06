@@ -1,0 +1,55 @@
+<div class="col-6">
+        {{#if this.studid}}
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingRoll" value="{{this.studid}}" placeholder="Enter Roll Number" name="studid" disabled>
+            <label for="floatingRoll">Roll No</label>
+        </div>
+        {{else}}
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingRoll" value="{{this.studid}}" placeholder="Enter Roll Number" name="studid">
+            <label for="floatingRoll">Roll No</label>
+        </div>
+        {{/if}}
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingCourse" value="{{this.course}}" placeholder="Enter Course Name" name="course">
+            <label for="floatingCourse">Course </label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingName" value="{{this.name}}" placeholder="Enter Name" name="name">
+            <label for="floatingName">Name</label>
+        </div>
+
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="floatingName"  placeholder="Enter Address" name="address">{{this.address}}</textarea>
+            <label for="floatingName">Address</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating">
+            <input type="text" class="form-control" value="{{this.contactno}}" id="floatingContact" placeholder="Enter Contanct Number"
+                name='contactno'>
+            <label for="floatingContact">Contact Number</label>
+
+        </div>
+
+    </div>
+    <div class="col-6">
+        <div class="form-floating">
+            <select class="form-select" id="floatingSelect"  aria-label="Floating label select example" name="status">
+                <option value="{{this.status}}">{{this.status}}</option>
+                <option value="Pass">Pass</option>
+                <option value="Fail">Fail</option>
+                <option value="Appeared">Appeared</option>
+                <label for="floatingSelect">Select Status</label>
+            </select>
+        </div>
+    </div>
+    <div class="col-12 d-grid">
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </div>

@@ -1,0 +1,43 @@
+{{#if removedUser}}
+<div class="alert alert-success alert-dismissible fade show" role="alert"> 
+  <strong>User has been removed!</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+<div class="row">
+  <div class="col-6"><h1>Users</h1></div>
+  <div class="col-6 d-flex justify-content-end">
+    <a href="/addstudent" type="button" class="btn btn-primary align-self-center">+ Add Student Data</a>
+  </div>
+</div>
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr> 
+      <th scope="col">Roll No</th>
+      <th scope="col">Course</th>
+      <th scope="col">Name</th> 
+      <th scope="col">Address</th>
+      <th scope="col">Contact No.</th>
+      <th scope="col">Status</th>
+      <th scope="col" class="text-end">Action</th> 
+    </tr>
+  </thead>
+  <tbody> 
+    {{#each rows}}
+    <tr> 
+      <td>{{this.studid}}</td>
+      <td>{{this.course}}</td>
+      <td>{{this.name}}</td> 
+      <td>{{this.address}}</td>
+      <td>{{this.contactno}}</td> 
+      <td>{{this.status}}</td> 
+      {{!-- /deletestudent/{{this.studid}} --}}
+      <td><a href='/viewstudent/{{this.studid}}' type="button" class='btn bt-light btn-small'><i class="bi bi-eye">View</i></a>
+      <a href='/editstudent/{{this.studid}}' type="button" class='btn bt-light btn-small'><i class="bi bi-pencil">Edit</i></a>
+      <a href='/deletestudent/{{this.studid}}'  type="button"  class='btn bt-light btn-small'><i class="bi bi-person-x"> Delete</i></a></td> 
+    </tr> 
+    {{/each}}
+  </tbody>
+ 
+
+</table>

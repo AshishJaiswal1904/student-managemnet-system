@@ -1,0 +1,1 @@
+CREATE TABLE `schooldb`.`student` ( `studid` INT(45) NOT NULL AUTO_INCREMENT , `course` VARCHAR(55) NULL , `name` VARCHAR(55) NULL , `dob` DATE NULL , `address` VARCHAR(100) NULL , `contactno` VARCHAR(20) NULL , `status` VARCHAR(25) NULL , PRIMARY KEY (`studid`)) ENGINE = InnoDB;
