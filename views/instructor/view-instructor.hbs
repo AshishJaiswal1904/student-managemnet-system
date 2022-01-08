@@ -1,7 +1,7 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">View Student</li>
+        <li class="breadcrumb-item active" aria-current="page">View Instructor</li>
     </ol>
 </nav>
 
@@ -9,26 +9,25 @@
     {{#each rows}}
     <div class="row mb-5">
         <div class="col text-center">
-            <h3>Roll No: {{this.studid}}</h3>
+            <h3>{{this.instructorname}}</h3>
         </div>
     </div>
     <div class="row">
         <div class="col">
             <table class="table">
                 <thead>
+                    <th>Instructor Id</th>
                     <th>Name</th>
-                    <th>Course</th>
-                    <th>Address</th>
-                    <th>Contact</th>
-                    <th>Status</th>
+                    <th>Domain</th>
+                    <th>Years of Experience</th>
+                    <th>Course Id</th>
                 </thead>
                 <tbody>
-                    <td>{{this.name}}</td>
-                    <td>{{this.course}}</td>
-                    <td>{{this.address}}</td>
-                    <td>{{this.contactno}}</td>
-                    <td>{{this.status}}</td>
-
+                    <td>{{this.instructorid}}</td>
+                    <td>{{this.instructorname}}</td>
+                    <td>{{this.domain}}</td>
+                    <td>{{this.yearsofexperience}}</td>
+                    <td>{{this.courseid}}</td>
                 </tbody>
             </table>
         </div>

@@ -9,26 +9,25 @@
     {{#each rows}}
     <div class="row mb-5">
         <div class="col text-center">
-            <h3>Roll No: {{this.studid}}</h3>
+            <h3>Course Id: {{this.courseid}}</h3>
         </div>
     </div>
     <div class="row">
         <div class="col">
             <table class="table">
                 <thead>
-                    <th>Name</th>
-                    <th>Course</th>
-                    <th>Address</th>
-                    <th>Contact</th>
-                    <th>Status</th>
+                    <th scope="col">Course Id</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Credits</th>
+                    <th scope="col">Semester</th>
                 </thead>
                 <tbody>
-                    <td>{{this.name}}</td>
-                    <td>{{this.course}}</td>
-                    <td>{{this.address}}</td>
-                    <td>{{this.contactno}}</td>
-                    <td>{{this.status}}</td>
-
+                    <td>{{this.courseid}}</td>
+                    <td>{{this.coursename}}</td>
+                    <td>{{this.department}}</td>
+                    <td>{{this.credits}}</td>
+                    <td>{{this.semester}}</td>
                 </tbody>
             </table>
         </div>

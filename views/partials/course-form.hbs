@@ -1,0 +1,50 @@
+<div class="col-6">
+    {{#if this.courseid}}
+    <div class="form-floating mb-3">
+        <legend>Course Id</legend>
+        <input type="text" class="form-control" id="floatingRoll" value="{{this.courseid}}"
+            placeholder="Course id" name="courseid" disabled> 
+    </div>
+    {{else}}
+    <div class="form-floating mb-3">
+        <legend>Course Id</legend>
+        <input type="text" class="form-control" id="floatingRoll" value="{{this.courseid}}"
+            placeholder="Course id" name="courseid" required> 
+    </div>
+    {{/if}}
+</div>
+<div class="col-6">
+    <div class="form-floating mb-3">
+        <legend>Course Name</legend>
+        <input type="text" class="form-control" id="floatingCourse" value="{{this.coursename}}"
+            placeholder="Enter Course Name" name="coursename" required> 
+    </div>
+</div>
+<div class="col-6">
+    <div class="form-floating mb-3">
+        <legend>Department</legend>
+        <input type="text" class="form-control" id="floatingCourse" value="{{this.department}}"
+            placeholder="Enter Course Name" name="department" required> 
+    </div>
+</div>
+<div class="col-6">
+    <div class="form-floating mb-3">
+        <legend>Credits</legend>
+        <input type="text" class="form-control" id="floatingCourse" value="{{this.credits}}"
+            placeholder="Enter Course Name" name="credits" required> 
+    </div>
+</div>
+<div class="col-6">
+    <div class="form-floating">
+        <legend>Select Semester</legend>
+        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="semester"
+            required> 
+            <option value="{{this.semester}}">{{this.semester}} </option>
+            <option value="Even">Even</option>
+            <option value="Odd">Odd</option> 
+        </select>
+    </div>
+</div>
+<div class="col-12 d-grid">
+    <button class="btn btn-primary" type="submit">Submit</button>
+</div>

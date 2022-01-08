@@ -1,0 +1,41 @@
+{{#if removedInstuctor}}
+<div class="alert alert-success alert-dismissible fade show" role="alert"> 
+  <strong>Instructor has been removed!</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+<div class="row">
+  <div class="">
+  <div class="d-flex justify-content-end">
+    <a href="/addinstructor" type="button" class="btn btn-primary align-self-center">+ Add Instructor</a>
+  </div>
+</div>
+<table class="mt-5 table table-bordered">
+  <thead class="thead-dark">
+    <tr> 
+      <th scope="col">Instudtor Id</th>
+      <th scope="col">Instructor Name</th>
+      <th scope="col">Domain</th> 
+      <th scope="col">Years of Experience</th>
+      <th scope="col">Course Id</th> 
+      <th scope="col" class="text-end">Action</th> 
+    </tr>
+  </thead>
+  <tbody> 
+    {{#each rows}}
+    <tr> 
+      <td>{{this.instructorid}}</td>
+      <td>{{this.instructorname}}</td>
+      <td>{{this.domain}}</td> 
+      <td>{{this.yearsofexperience}}</td>
+      <td>{{this.courseid}}</td>  
+      {{!-- /deletestudent/{{this.studid}} --}}
+      <td><a href='/viewinstructor/{{this.instructorid}}' type="button" class='btn bt-light btn-small'><i class="bi bi-eye">View</i></a>
+      <a href='/editinstructor/{{this.instructorid}}' type="button" class='btn bt-light btn-small'><i class="bi bi-pencil">Edit</i></a>
+      <a href='/deleteinstructor/{{this.instructorid}}'  type="button"  class='btn bt-light btn-small'><i class="bi bi-person-x"> Delete</i></a></td> 
+    </tr> 
+    {{/each}}
+  </tbody>
+ 
+
+</table>

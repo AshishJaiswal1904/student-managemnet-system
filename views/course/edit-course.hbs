@@ -1,8 +1,8 @@
-<h2>Edit Student</h2>
+<h2>Edit Course</h2>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Edit Student</li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Course</li>
     </ol>
 </nav>
 {{#if alert}}
@@ -11,8 +11,8 @@
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {{/if}}
-{{#each rows}}
-<form class="row g-3 needs-validation" method="POST" action="/editstudent/{{this.studid}}" novalidate>
-     {{> student-form}}
+{{#each rows}} 
+<form class="row g-3 needs-validation" method="POST" action="/editcourse/{{this.courseid}}" novalidate>
+     {{> course-form}}
 </form>
 {{/each}}

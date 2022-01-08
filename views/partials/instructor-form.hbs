@@ -1,0 +1,57 @@
+<div class="col-6">
+    {{#if this.instructorid}}
+    <div class="form-floating mb-3">
+        <legend>Instructor Id</legend>
+        <input type="text" class="form-control" id="floatingRoll" value="{{this.instructorid}}" name="instructorid"
+            disabled>
+
+    </div>
+    {{else}}
+    <div class="form-floating mb-3">
+        <legend>Instructor Id</legend>
+        <input type="text" class="form-control" id="floatingRoll" value="{{this.instructorid}}" name="instructorid">
+
+    </div>
+    {{/if}}
+</div>
+<div class="col-6">
+    <div class="form-floating mb-3">
+        <legend>Instructor Name</legend>
+        <input type="text" class="form-control" id="floatingName" value="{{this.instructorname}}" name="instructorname">
+    </div>
+
+</div>
+<div class="col-6">
+    <div class="form-floating mb-3">
+        <legend>Domain</legend>
+        <input type="text" class="form-control" id="floatingName" value="{{this.domain}}" placeholder="Domain"
+            name="domain">
+    </div>
+</div>
+<div class="col-6">
+    <div class="form-floating">
+        <legend>Years of Experience</legend>
+        <input type="text" class="form-control" value="{{this.yearsofexperience}}" id="floatingContact"
+            placeholder="Enter Contanct Number" name='yearsofexperience'>
+    </div>
+
+</div>
+
+<div class="col-6">
+    <div class="form-floating">
+        <legend>Select Course</legend>
+
+        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="courseid">
+            <option value="{{this.courseid}}">{{this.courseid}}</option>
+            {{#each courses }}
+            <option value="{{this.courseid}}">{{this.coursename}}</option>
+            {{/each}}
+            <label for="floatingSelect">Select Status</label>
+        </select>
+    </div>
+</div>
+<div class="col-12 d-grid">
+    <button class="btn btn-primary" type="submit">Submit</button>
+</div>
+
+{{log this}}

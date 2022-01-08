@@ -1,55 +1,57 @@
 <div class="col-6">
-        {{#if this.studid}}
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingRoll" value="{{this.studid}}" placeholder="Enter Roll Number" name="studid" disabled>
-            <label for="floatingRoll">Roll No</label>
-        </div>
-        {{else}}
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingRoll" value="{{this.studid}}" placeholder="Enter Roll Number" name="studid">
-            <label for="floatingRoll">Roll No</label>
-        </div>
-        {{/if}}
-    </div>
-    <div class="col-6">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingCourse" value="{{this.course}}" placeholder="Enter Course Name" name="course">
-            <label for="floatingCourse">Course </label>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingName" value="{{this.name}}" placeholder="Enter Name" name="name">
-            <label for="floatingName">Name</label>
-        </div>
+    {{#if this.studid}}
+    <div class="form-floating mb-3">
+        <legend>Roll No</legend>
+        <input type="text" class="form-control" id="floatingRoll" value="{{this.studid}}"
+            placeholder="Enter Roll Number" name="studid" disabled>
 
     </div>
-    <div class="col-6">
-        <div class="form-floating mb-3">
-            <textarea class="form-control" id="floatingName"  placeholder="Enter Address" name="address">{{this.address}}</textarea>
-            <label for="floatingName">Address</label>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="form-floating">
-            <input type="text" class="form-control" value="{{this.contactno}}" id="floatingContact" placeholder="Enter Contanct Number"
-                name='contactno'>
-            <label for="floatingContact">Contact Number</label>
-
-        </div>
+    {{else}}
+    <div class="form-floating mb-3">
+        <legend>Roll No</legend>
+        <input type="text" class="form-control" id="floatingRoll" value="{{this.studid}}"
+            placeholder="Enter Roll Number" name="studid" required>
 
     </div>
-    <div class="col-6">
-        <div class="form-floating">
-            <select class="form-select" id="floatingSelect"  aria-label="Floating label select example" name="status">
-                <option value="{{this.status}}">{{this.status}}</option>
-                <option value="Pass">Pass</option>
-                <option value="Fail">Fail</option>
-                <option value="Appeared">Appeared</option>
-                <label for="floatingSelect">Select Status</label>
-            </select>
-        </div>
+    {{/if}}
+</div>
+<div class="col-6">
+    <div class="form-floating">
+        <legend>Select Course</legend> 
+        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="courseid">
+            <option value="{{this.course}}">{{this.course}}</option>
+            {{#each courses}}
+            <option value="{{this.courseid}}">{{this.coursename}}</option>
+            {{/each}}
+        </select> 
     </div>
-    <div class="col-12 d-grid">
+</div>
+<div class="col-6">
+    <div class="form-floating mb-3">
+        <legend>Name</legend>
+        <input type="text" class="form-control" id="floatingName" value="{{this.name}}" placeholder="Enter Name"
+            name="name" required>
+
+    </div>
+
+</div>
+<div class="col-6">
+    <div class="form-floating mb-3">
+        <legend>Address</legend>
+        <textarea class="form-control" id="floatingName" placeholder="Enter Address" name="address"
+            required>{{this.address}}</textarea>
+
+    </div>
+</div>
+<div class="col-6">
+    <div class="form-floating">
+        <legend>Contact No</legend>
+        <input type="text" class="form-control" value="{{this.contactno}}" id="floatingContact"
+            placeholder="Enter Contanct Number" name='contactno' required>
+
+    </div>
+
+</div>
+<div class="col-12 d-grid">
     <button class="btn btn-primary" type="submit">Submit</button>
-    </div>
+</div>
